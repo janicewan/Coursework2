@@ -20,9 +20,9 @@ public class BakedPizzaState implements PizzaState {
 	 * @see states.PizzaState#bake()
 	 */
 	@Override
-	public void bake() throws Exception {
-		System.out.print("Baking the Pizza");  
+	public String bake() {
 		pizza.setState(pizza.getBakedState());
+		return ("Baking the Pizza");  
 
 	}
 
@@ -30,16 +30,16 @@ public class BakedPizzaState implements PizzaState {
 	 * @see states.PizzaState#deliver()
 	 */
 	@Override
-	public void deliver() throws Exception {
-		throw new Exception("Can't deliver a pizza not yet cooked");
+	public String deliver() {
+		return ("Can't deliver a pizza not yet cooked");
 
 	}
 
 
 	@Override
-	public void cancel() throws Exception {
-		System.out.print("Order Cancelled");  
-		pizza.setState(pizza.getCancelState());		
+	public String cancel() {
+		pizza.setState(pizza.getCancelState());
+		return ("Order Cancelled");  
 	}
 
 

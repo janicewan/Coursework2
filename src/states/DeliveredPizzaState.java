@@ -18,8 +18,8 @@ public class DeliveredPizzaState implements PizzaState {
 	 * @see states.PizzaState#bake()
 	 */
 	@Override
-	public void bake() throws Exception {  
-		throw new Exception("Can't bake a pizza already delivered");
+	public String bake() {  
+		return ("Can't bake a pizza already delivered");
 				
 	}
 
@@ -27,17 +27,15 @@ public class DeliveredPizzaState implements PizzaState {
 	 * @see states.PizzaState#deliver()
 	 */
 	@Override
-	public void deliver() throws Exception {
-		System.out.print("Delivering the Pizza");  
+	public String deliver() {
 		pizza.setState(pizza.getDeliveredState());
-
+		return ("Delivering the Pizza");  
 	}
 
 	@Override
-	public void cancel() throws Exception {
-		System.out.print("Order Cancelled");  
+	public String cancel() {
 		pizza.setState(pizza.getCancelState());
-		
+		return ("Order Cancelled");  
 	}
 
 

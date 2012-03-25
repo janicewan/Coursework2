@@ -8,22 +8,22 @@ public class cancelPizzaState implements PizzaState {
 	 * @see states.PizzaState#bake()
 	 */
 	@Override
-	public void bake() throws Exception {  
-		throw new Exception("Order already cancelled");
+	public String bake() {  
+		return ("Order already cancelled");
 				
 	}
 	/* (non-Javadoc)
 	 * @see states.PizzaState#deliver()
 	 */
 	@Override
-	public void deliver() throws Exception {
-		throw new Exception("Order already cancelled");
+	public String deliver() {
+		return ("Order already cancelled");
 
 	}
 
 	@Override
-	public void cancel() throws Exception {
-		throw new Exception("Order already cancelled");
+	public String cancel() {
+		return ("Order already cancelled");
 		
 	}
 

@@ -27,10 +27,10 @@ public class Pizza {
 	public void setState(PizzaState state) 
 	{  this.state = state; }  
 	
-	public void bake() throws Exception 
+	public void bake() 
 	{    this.state.bake();	}   
 	
-	public void deliver() throws Exception 
+	public void deliver() 
 	{   this.state.deliver();}
 	
 	public PizzaState getCookedState() 
